@@ -1,0 +1,9 @@
+psutil>=5.9.0
+rich>=13.7.0
+
+# Optional - only needed for `bsen remote` credentialed audits:
+# paramiko>=3.4.0      # remote Linux targets over SSH
+# pywinrm>=0.4.3       # remote Windows targets over WinRM
+
+# Optional - only needed for YARA-based IOC matching (roadmap):
+# yara-python>=4.5.0

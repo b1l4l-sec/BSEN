@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsen"
+version = "1.0.0"
+description = "BSEN (Blue Security Endpoint Navigator): read-only cross-platform endpoint security auditor & digital forensics CLI"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [{ name = "b1l4l-sec" }]
+keywords = ["security", "audit", "endpoint", "forensics", "blue-team", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    "psutil>=5.9.0",
+    "rich>=13.7.0",
+]
+
+[project.optional-dependencies]
+remote = ["paramiko>=3.4.0", "pywinrm>=0.4.3"]
+dev = ["pytest>=8.0.0", "black", "isort", "flake8", "mypy"]
+
+[project.scripts]
+bsen = "bsen.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["bsen", "bsen.*"]
+
+[tool.black]
+line-length = 110
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
