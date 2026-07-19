@@ -1,4 +1,4 @@
-# BSEN — Blue Security Endpoint Navigator
+# BSEN <=> Blue Security Endpoint Navigator
 
 **Professional cross-platform endpoint security auditor & digital forensics CLI.**
 *Created by [b1l4l-sec](https://github.com/b1l4l-sec).*
